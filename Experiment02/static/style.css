@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    min-height:100vh;
+    font-family:'Inter',sans-serif;
+    background: radial-gradient(circle at top,#020617,#000000);
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    color:#f8fafc;
+}
+
+.container{
+    width:460px;
+    background:linear-gradient(145deg,#020617,#020617);
+    border-radius:18px;
+    padding:32px 30px;
+    border:1px solid rgba(255,255,255,.07);
+    box-shadow:0 30px 70px rgba(0,0,0,.9);
+}
+
+h1{
+    text-align:center;
+    font-weight:700;
+    letter-spacing:.4px;
+    color:#e0e7ff;
+}
+
+.sub{
+    text-align:center;
+    font-size:13px;
+    opacity:.7;
+    margin-bottom:22px;
+}
+
+.field{
+    margin-bottom:16px;
+}
+
+label{
+    font-size:13px;
+    font-weight:500;
+    display:block;
+    margin-bottom:5px;
+    color:#c7d2fe;
+}
+
+.input{
+    width:100%;
+    padding:11px 12px;
+    border-radius:10px;
+    border:1px solid #1e293b;
+    background:#020617;
+    color:white;
+    outline:none;
+    transition:.3s;
+}
+
+.input:focus{
+    border-color:#6366f1;
+    box-shadow:0 0 0 2px rgba(99,102,241,.25);
+}
+
+.btn{
+    margin-top:10px;
+    width:100%;
+    padding:12px;
+    border:none;
+    border-radius:12px;
+    font-weight:600;
+    background:linear-gradient(135deg,#6366f1,#22d3ee);
+    color:#020617;
+    cursor:pointer;
+    transition:.35s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 30px rgba(99,102,241,.45);
+}
+
+.secondary{
+    display:inline-block;
+    margin-top:18px;
+    text-align:center;
+    background:linear-gradient(135deg,#22c55e,#4ade80);
+}
+
+.error{
+    color:#fb7185;
+    font-size:11px;
+}
+
+.success{
+    color:#22c55e;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    margin-top:10px;
+}
+
+table tr:nth-child(even){
+    background:rgba(148,163,184,.05);
+}
+
+table th,table td{
+    padding:8px 10px;
+    font-size:14px;
+}
+
+table th{
+    color:#a5b4fc;
+    width:42%;
+}

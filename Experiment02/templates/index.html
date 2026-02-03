@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Verification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="wrapper">
+    <div class="container">
+        <h1>Student Verification</h1>
+        <p class="sub">Secure Form Validation System</p>
+
+        <form method="POST">
+
+            {% for field in form if field.type != 'SubmitField' %}
+            <div class="field">
+                <label>{{ field.label.text }}</label>
+                {{ field(class="input") }}
+                {% for error in field.errors %}
+                    <span class="error">{{ error }}</span>
+                {% endfor %}
+            </div>
+            {% endfor %}
+
+            {{ form.submit(class="btn") }}
+        </form>
+    </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Submitted Data</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1 class="success">Submission Successful</h1>
+
+    <table>
+        {% for key,value in data.items() %}
+        {% if key not in ['submit'] %}
+        <tr>
+            <th>{{ key.replace('_',' ').title() }}</th>
+            <td>{{ value }}</td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+    </table>
+
+    <a href="/" class="btn secondary">New Entry</a>
+</div>
+
+</body>
+</html>
