@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flask Dynamic Page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="card">
+    <h1>Hello, {{ data.name }} 👋</h1>
+    <p class="role">{{ data.role }}</p>
+
+    <h3>Skills</h3>
+    <ul>
+        {% for skill in data.skills %}
+            <li>{{ skill }}</li>
+        {% endfor %}
+    </ul>
+
+    <a class="btn" href="/hello/Developer">Change User</a>
+</div>
+
+</body>
+</html>
