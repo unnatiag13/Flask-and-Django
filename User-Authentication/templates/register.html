@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+<div class="container">
+  <h2>Register</h2>
+  {% with messages = get_flashed_messages(with_categories=true) %}
+  {% if messages %}
+    {% for category, message in messages %}
+      <div class="flash {{ category }}">{{ message }}</div>
+    {% endfor %}
+  {% endif %}
+{% endwith %}
+
+
+  <form method="POST">
+    <input name="username" placeholder="Username" required>
+    <input name="password" type="password" placeholder="Password" required>
+    <button>Register</button>
+  </form>
+
+  <p style="text-align:center; margin-top:10px;">
+    Already have an account?
+    <a href="{{ url_for('login') }}">Login</a>
+  </p>
+</div>
